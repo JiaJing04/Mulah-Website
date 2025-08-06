@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MULAH Tables</title>
+    <style>
+        body 
+        {
+            font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            background-color: #f6f3d2;
+            color: #000000;
+        }
+        .container 
+        {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 
+        {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        table 
+        {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td 
+        {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th 
+        {
+            background-color: #f6b560;
+            color: white;
+        }
+        tr:nth-child(even) 
+        {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Table 1</h2>
+        <table>
+            <tr><th>Index #</th><th>Value</th></tr>
+            {% for row in table1 %}
+                <tr>
+                    <td>{{ row['Index #'] }}</td>
+                    <td>{{ row['Value'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Table 2</h2>
+        <table>
+            <tr><th>Category</th><th>Value</th></tr>
+            {% for row in table2 %}
+                <tr>
+                    <td>{{ row['Category'] }}</td>
+                    <td>{{ row['Value'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
